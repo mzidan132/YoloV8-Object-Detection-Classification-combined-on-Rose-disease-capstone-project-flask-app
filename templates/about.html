@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+</head>
+
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/pure">ObjDetModel</a>
+    <form action="/about" method="POST">
+      <button style="background-color: goldenrod;border:none;" type="submit" onclick="openUrl()">Pesticides</button>
+  </form>
+    <a href="https://f4c3-103-138-190-94.ngrok-free.app/"target="blank">Chatbot</a>
+  </div>
+  <script>
+    function openUrl() {
+        window.open("https://garden.com.bd/c/insecticides/", "_blank");
+        return false; 
+    }
+</script>
+  
+  <div class="about-section"><h1><span id="main">
+    <button id="openbtn" class="openbtn" onclick="openNav()">☰</button></span>About Us</h1>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="/static/p.jpg" alt="Jane" style="width:100%;height:250px;">
+        <div class="container">
+          <h3>Pulak Islam</h3>
+          <p class="title">Data Collector & Digram Designer</p>
+          <p>Hello I am Pulak. I am a student of Department of CSE, EWU.</p>
+          <p>I have good communication skills and I am interested in marketing, system analyst roles etc.</p>
+          <p>Bogura, Bangladesh</p>
+          <p><button class="button" id="redirectButton">Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("redirectButton").addEventListener("click", function () {
+        // Replace the URL below with the link you want to redirect to
+        window.location.href = "https://www.facebook.com/pulak.islam.9","_blank";
+      });
+    </script>
+    <div class="column">
+      <div class="card">
+        <img src="/static/z.jpg" alt="Mike" style="width:100%;height: 250px;">
+        <div class="container">
+          <h3>Md ZinDin Zidan</h3>
+          <p class="title">Software Engineer and Data Scientist</p>
+          <p>Hello I am Zidan. I am a student of Department of CSE, EWU.</p>
+          <ul>
+            <li>My Passion is Programming</li>
+            <li>My Skills include:</li>
+            <li>HTML, CSS, Bootstrap, Javascript, Python, Flask, Machine Learning, Deep Learning</li>
+          </ul>
+          <p><button class="button" id = "redirectButtons">Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("redirectButtons").addEventListener("click", function () {
+        // Replace the URL below with the link you want to redirect to
+        window.location.href = "https://www.facebook.com/muhammad.zidane.988371","_blank";
+      });
+    </script>
+    <div class="column">
+      <div class="card">
+        <img src="/static/s.jpg" alt="John" style="width:100%;height:250px;">
+        <div class="container">
+          <h3>Safaet Abdullah Emon</h3>
+          <p class="title">Chatbot Data Curator</p>
+          <p>Hello I am Safaet. I am a student of Department of CSE, EWU.</p>
+          <p>I have good communication skills and I am interested in networking and bank roles etc.</p>
+          <p>Joypurhat, Bangladesh</p>
+          <p><button class="button" id = "redirectButtonn">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("redirectButtonn").addEventListener("click", function () {
+      // Replace the URL below with the link you want to redirect to
+      window.location.href = "https://www.facebook.com/safaetabdullah.emon","_blank";
+    });
+  </script>
+  <h2 class="h">About Our Project</h2>
+  <div class="dv">
+    <h3 style="text-align: center;color:rgb(187, 9, 9)">Rose Plantatation Assistant</h3>
+    <ul>
+      <li>Our Project is about building Rose plantation assistant using deep neural networks.</li><br>
+      <li> The user will be able to upload an image of suspected leaf and the model will recognize the disease and the
+        disease preventation guidelines will be provided in a chatbot and in the dropdowns as well.</li><br>
+      <li> Also the user will be able to get pesticides related source suggestion via ads and they will be able to
+        communicate with us for further assistant if they register.</li>
+    </ul>
+    <div style="text-align: center;">
+    <ul type='circle'>
+      <li>Technology Used for Development:</li>
+      <li>Frontend: HTML, CSS, Bootstrap, Javascript</li>
+      <li>Backend: Python, Flask, Sqlite, ML models and Libraries</li>
+    </ul></div>
+  </div>
+<script>
+  function openNav() {
+  document.getElementById("mySidebar").style.width = "150px";
+  document.getElementById("main").style.marginLeft = "150px";
+  document.getElementById("openbtn").style.visibility = "hidden"; // Hide the ☰ button
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("openbtn").style.visibility = "visible"; // Show the ☰ button
+}
+</script>
+
+</body>
+
+</html>

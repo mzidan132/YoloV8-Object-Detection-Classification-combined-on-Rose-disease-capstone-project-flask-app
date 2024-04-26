@@ -61,8 +61,9 @@
   <div class="cbot" style="text-align: center;">
     <h3>For Live Camera Video Detection <div id="video-container">
         <img id="live-video" src="" alt="Live Video Feed">
-      </div></h3>
-      <p><button id="start-feed" class="button" style="width:155px;">Live Detection</button>
+      </div>
+    </h3>
+    <p><button id="start-feed" class="button" style="width:155px;">Live Detection</button>
       <script>
         document.getElementById("start-feed").addEventListener("click", function () {
           document.getElementById("live-video").style.display = "block"; // Show the live video
@@ -72,21 +73,22 @@
           });
         });
       </script>
-      </p>
-  <script>
-    document.getElementById("start-feed").addEventListener("click", function () {
+    </p>
+    <script>
+      document.getElementById("start-feed").addEventListener("click", function () {
         window.location.href = "/live_feed_page"; // Redirect to the live feed page
-    });
-</script>
-  
-    <h3>For Detection on Saved Videos <form action="/vidpred" method="post" enctype="multipart/form-data"></h3>
-        <span>
-            <input type="file" name="file" accept="video/mp4">
-            <button type="submit" class="button">Predict</button>
-        </span>
-    </div>
-    
-    
+      });
+    </script>
+
+    <h3>For Detection on Saved Videos <form action="/vidpred" method="post" enctype="multipart/form-data">
+    </h3>
+    <span>
+      <input type="file" name="file" accept="video/mp4">
+      <button type="submit" class="button">Predict</button>
+    </span>
+  </div>
+
+
   </form>
   </div><br>
 
@@ -274,18 +276,18 @@
   </div>
   <script>
     var coll = document.getElementsByClassName("collapsible");
-var i;    
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
   </script>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

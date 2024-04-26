@@ -49,9 +49,9 @@ def predict_disease(image_stream):
 @app.route('/')
 def home():
    
-    image_exists = os.path.exists('static/images/temp.JPG')
+    image_exists = os.path.exists('static/image/temp.JPG')
     if image_exists:
-        image_url = f'/static/images/temp.JPG'
+        image_url = f'/static/image/temp.JPG'
     else:
         image_url = None
 
@@ -125,9 +125,9 @@ def predict():
     return render_template('index.html', prediction=prediction, probs=probs, names_dict=names_dict, image_exists=image_exists, image_url=image_url,background_image_url="/static/pf.jpg")
 @app.route('/pure',methods=['GET','POST'])
 def pure():
-    image_path = os.path.exists('static/images/temp.JPG')
+    image_path = os.path.exists('static/image/temp.JPG')
     if image_path:
-        image_url = f'/static/images/temp.JPG'
+        image_url = f'/static/image/temp.JPG'
     else:
         image_url = None
     if request.method == 'POST':

@@ -9,6 +9,16 @@
 </head>
 
 <body>
+  <div id="google_translate_element"></div>
+  <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'bn,en,fr,es,ar', // Languages to include
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="/">Home</a>
@@ -109,6 +119,10 @@
       <li>Backend: Python, Flask, Sqlite, ML models and Libraries</li>
     </ul></div>
   </div>
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
 <script>
   function openNav() {
   document.getElementById("mySidebar").style.width = "150px";

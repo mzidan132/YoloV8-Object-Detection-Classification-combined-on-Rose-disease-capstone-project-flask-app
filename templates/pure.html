@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Rose Disease Detection Assitant</title>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
@@ -24,7 +25,17 @@
 </head>
 
 <body style="background-image: url('{{ background_image_url }}');background-size: cover;background-position: center;">
-
+<div id="google_translate_element">
+</div>
+<script>
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'bn,en,fr,es,ar', // Languages to include
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+  }
+</script>
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="/">Home</a>
@@ -45,7 +56,7 @@
     <button id="openbtn" class="openbtn" onclick="openNav()">☰</button><span class="hn">Rose Disease Detection by VGG16
       & Plantation Assitant <span style='font-size:25px;'>&#129344;</span></h1></span>
   </div>
-
+  
   <div class="center" id="mydiv">
     <form action="/predictions" method="post" enctype="multipart/form-data">
       <h3><label for="image" style="color:#6c2d76">Upload an Image For Detection:</label></h3>
@@ -274,6 +285,8 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/bLVl1PPv-J8" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
